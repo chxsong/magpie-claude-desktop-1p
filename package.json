@@ -1,0 +1,51 @@
+{
+  "name": "magpie-claude-desktop-1p",
+  "version": "0.1.0+03",
+  "description": "Use Magpie models in Claude Desktop's first-party Code sessions",
+  "type": "module",
+  "main": "./dist/index.mjs",
+  "files": [
+    "dist",
+    "agent.js",
+    "src",
+    "scripts",
+    "README.md",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "README.zh-CN.md",
+    "assets"
+  ],
+  "license": "MIT",
+  "keywords": [
+    "magpie-plugin",
+    "magpie",
+    "claude-desktop",
+    "opencode-plugin"
+  ],
+  "scripts": {
+    "build": "bun scripts/build.mjs",
+    "test": "node scripts/test.mjs",
+    "check": "npm test && npm run build && npm pack --dry-run",
+    "prepublishOnly": "npm run check"
+  },
+  "magpie": {
+    "name": "Claude Desktop 1P",
+    "summary": {
+      "en": "Magpie models in first-party Claude Desktop Code sessions",
+      "zh": "在保持原生登录的 Claude Desktop Code 中使用 Magpie 模型"
+    },
+    "agent": "./agent.js"
+  },
+  "publishConfig": {
+    "access": "public",
+    "tag": "alpha"
+  },
+  "devDependencies": {
+    "node-forge": "1.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chxsong/magpie-claude-desktop-1p.git"
+  },
+  "homepage": "https://github.com/chxsong/magpie-claude-desktop-1p#readme"
+}
