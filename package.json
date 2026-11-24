@@ -37,8 +37,7 @@
     "agent": "./agent.js"
   },
   "publishConfig": {
-    "access": "public",
-    "tag": "alpha"
+    "access": "public"
   },
   "devDependencies": {
     "node-forge": "1.4.3"
